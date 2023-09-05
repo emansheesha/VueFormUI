@@ -35,6 +35,8 @@ export default {
   methods: {
     handleSubmit() {
       console.log(this.user);
+      localStorage.setItem('user', JSON.stringify(this.user));
+      window.location.href='/'
     },
   },
 };

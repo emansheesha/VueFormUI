@@ -9,7 +9,7 @@ components: {Login,},
 <template>
   <div>
    <h1>Login Form</h1>
-   <Login/>
+   <router-view></router-view>
   </div>
   
 </template>
