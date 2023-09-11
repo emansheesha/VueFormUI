@@ -4,10 +4,12 @@
     {{ st }}
   </div>
   <input v-on:click="deleteArr" value="delete" type="submit"/>
+  <button @click="updateActive">hire event </button>
+ child: {{isActive}}
 </template>
 <script>
 export default {
-  props: ["std"],
+  props: ["std","isActive"],
   data() {
     return {
       stud: this.std,
@@ -17,6 +19,9 @@ export default {
     deleteArr(){
         console.log('click')
         return this.stud.pop()
+    },
+    updateActive(){
+      this.$emit('changeActive')
     }
   }
 };
